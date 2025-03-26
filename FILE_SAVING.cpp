@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+#include "ADD_USER.cpp"
+#include "ADD_MOVIE.cpp"
 // #include "movie struct.cpp"
 using namespace std;
 struct datastorage

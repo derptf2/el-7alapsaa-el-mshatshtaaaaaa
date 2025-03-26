@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "movie struct.cpp"
+#include "MOVIE_STRUCT.cpp"
 #define shoohdy                   \
     ios_base::sync_with_stdio(0); \
     cin.tie(0);                   \
