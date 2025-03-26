@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <MOVIE_STRUCT.cpp>
 #include "ADD_USER.cpp"
 #include "ADD_MOVIE.cpp"
 // #include "movie struct.cpp"
