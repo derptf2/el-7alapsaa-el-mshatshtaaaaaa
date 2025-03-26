@@ -1,42 +1,38 @@
 #include <bits/stdc++.h>
+#include "MAINMENU.cpp"
 using namespace std;
-const int n = 100; // constant for array
-int idgreat = 0;       // global id for userid array
-int namegreat = 0;     // global id for username array
 
 struct userinputs
 {
-    int userid[n]{0};
-    string username[n];
+    long long userid=-20241700193;
+    string username;
 };
-userinputs user;   // global user variable and dont ask why....
-void savevalues(); // declare of functions to avoid errors in compilations
-void loadvalues();
+userinputs user[100];   // global user variable and dont ask why....
+// void savevalues(); // declare of functions to avoid errors in compilations
+// void loadvalues();
 void userinput();
 void showuserinformation();
-void optionalinput();
-
+int countusers()
+// void optionalinput();
 void userinput()
 {
-
+    int usercount=countusers();
     cout << "Enter your name :" << endl;
     cin.ignore();
-    getline(cin, user.username[namegreat]);
+    getline(cin, user[usercount].username);
     cout << "Enter your id (8 digits) :" << endl;
-    cin >> user.userid[idgreat];
+    cin >> user[usercount].userid;
     
     //turns the ID from int to a string and stores it in x
-    string x = to_string(user.userid[idgreat]);
+    string x = to_string(user[usercount].userid);
 
     while (x.size() != 8)
     {
         cout << "invalid id " << "Rewrite the id again (must be 8 digits) : " << endl;
-        cin >> user.userid[idgreat];
-        x = to_string(user.userid[idgreat]);
+        cin >> user[usercount].userid;
+        x = to_string(user[usercount].userid);
     }
     cout << "saved succesfully." << endl;
-    namegreat++;
-    idgreat++;
 }
 // void savevalues()
 // {
@@ -76,16 +72,23 @@ void userinput()
 
 //     infile.close();
 // }
-
+int countusers()
+{
+    for (int i = 0; i < 100; i++)
+    {
+        if (user[i].userid==-20241700193)
+                return i;
+    }
+}
 void showuserinformation()
 {
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < 100; i++)
     {
-        if (user.userid[0] == 0)
+        if (user[0].userid == -20241700193)
         {
             cout << "The list is empty please enter a user." << endl;
-            optionalinput();
+            mainmenu();
             break;
         }
         if (user.userid[i] == 0)

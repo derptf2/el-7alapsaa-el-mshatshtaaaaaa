@@ -15,7 +15,7 @@ struct date
 struct movie
 {
     string name_movie;
-    int id;
+    long long id;
     bool is_rented;
     float fees_per_day;
     float over_fees_per_day;

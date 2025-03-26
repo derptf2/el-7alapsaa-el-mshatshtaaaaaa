@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #include "ADD_USER.cpp"
 #include "ADD_MOVIE.cpp"
+#include "MOVIE_STRUCT.cpp"
 using namespace std;
 void mainmenu()
 {

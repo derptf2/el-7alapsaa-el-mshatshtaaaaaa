@@ -5,31 +5,18 @@
 using namespace std;
 struct datastorage
 {
-    string student;
-    long long ID;
-    float GPA;
+    movie movies[100];
+    userinputs user[100];
 };
 datastorage datastruct[100];
 int main()
 {
-
-    //function for determining how many movies are inputted 
-    int datastructsize;
-    for (int i = 0; i < 100; i++)
-    {
-        if (datastruct[i].ID==0)
-            {
-                datastructsize=i;
-                break;
-            }
-    }
-
     // the following is the output function
     fstream data;
     data.open("data.txt",ios::out | ios::binary|ios::trunc);
     if (data)
     {   //write(cast a character pointer to read the memory location of datastruct, of memory size datastruct *number of datastructs )
-        data.write(reinterpret_cast<char*>(datastruct), datastructsize * sizeof(datastruct)); 
+        data.write(reinterpret_cast<char*>(datastruct), count_of_movies*sizeof(movies) + ); 
         data.close();
     }
     else

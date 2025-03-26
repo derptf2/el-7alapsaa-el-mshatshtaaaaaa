@@ -7,10 +7,8 @@
 #define ll long long
 #define endl '\n'
 using namespace std;
-const int maximum_number_of_movies = 100;
-movie movies[maximum_number_of_movies];
-int count_of_movies;
-
+movie movies[100];
+int count_movies();
 void add_movies();
 void list_of_movies();
 
@@ -43,19 +41,18 @@ int main()
         }
     } while (!stop);
 }
-
-void add_movies()
+int count_movies()
 {
     // function for counting movies every time you launch
     for (int i = 0; i < 100; i++)
     {
         if (movies[i].id==-20241700193)
-            {
-                count_of_movies=i;
-                break;
-            }
+                return i;
     }
-
+}
+void add_movies()
+{
+    int count_of_movies=count_movies();
     cout << "Enter movie id: ";
     cin >> movies[count_of_movies].id;
 
@@ -75,7 +72,8 @@ void add_movies()
 void list_of_movies()
 {
     //function that loops over all movie array indexes and displays them
-    for (int i = 0; i < count_of_movies; i++)
+    
+    for (int i = 0; i < count_movies(); i++)
     {
         cout << "\nMovie number " << i + 1 << ":\n";
         cout << "The Movie ID: " << movies[i].id << " | " << "Name of the Movie: " << movies[i].name_movie << " | ";
