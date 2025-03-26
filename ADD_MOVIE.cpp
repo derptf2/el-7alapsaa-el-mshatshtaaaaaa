@@ -13,6 +13,7 @@ int count_of_movies;
 
 void add_movies()
 {
+    // function for counting movies every time you launch
     for (int i = 0; i < 100; i++)
     {
         if (movies[i].id==-20241700193)
@@ -21,6 +22,7 @@ void add_movies()
                 break;
             }
     }
+
     cout << "Enter movie id: ";
     cin >> movies[count_of_movies].id;
 
