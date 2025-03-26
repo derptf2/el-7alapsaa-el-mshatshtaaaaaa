@@ -11,6 +11,39 @@ const int maximum_number_of_movies = 100;
 movie movies[maximum_number_of_movies];
 int count_of_movies;
 
+void add_movies();
+void list_of_movies();
+
+int main()
+{
+    int number;
+    bool stop=0;
+    do
+    {
+        cout << "\n3. Add movie" << '\n';
+        cout << "4. The list of movies" << '\n';
+        cout << "10. Exit" << '\n';
+        cout << "Enter choice: ";
+        cin >> number;
+        switch (number)
+        {
+            case 3:
+                add_movies();
+                break;
+            case 4:
+                list_of_movies();
+                break;
+            case 10:
+                cout << "Thank you for using our service!";
+                stop=1;
+                break;
+            default:
+                cout << "Invalid choice! Please choose another number";
+                break;
+        }
+    } while (!stop);
+}
+
 void add_movies()
 {
     // function for counting movies every time you launch
@@ -57,34 +90,4 @@ void list_of_movies()
             cout << "(Available)\n";
         }
     }
-}
-
-int main()
-{
-    int number;
-    bool stop=0;
-    do
-    {
-        cout << "\n3. Add movie" << '\n';
-        cout << "4. The list of movies" << '\n';
-        cout << "10. Exit" << '\n';
-        cout << "Enter choice: ";
-        cin >> number;
-        switch (number)
-        {
-            case 3:
-                add_movies();
-                break;
-            case 4:
-                list_of_movies();
-                break;
-            case 10:
-                cout << "Thank you for using our service!";
-                stop=1;
-                break;
-            default:
-                cout << "Invalid choice! Please choose another number";
-                break;
-        }
-    } while (!stop);
 }
