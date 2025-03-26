@@ -41,6 +41,7 @@ void add_movies()
 
 void list_of_movies()
 {
+    //function that loops over all movie array indexes and displays them
     for (int i = 0; i < count_of_movies; i++)
     {
         cout << "\nMovie number " << i + 1 << ":\n";
