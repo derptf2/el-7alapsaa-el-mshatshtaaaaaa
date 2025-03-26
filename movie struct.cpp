@@ -16,7 +16,7 @@ struct movie
 {
     string name_movie;
     int id;
-    bool is_ranted;
+    bool is_rented;
     float fees_per_day;
     float over_fees_per_day;
     vector<float> rating;
