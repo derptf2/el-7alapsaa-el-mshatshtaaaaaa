@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+#include "ADD_USER.cpp"
+#include "ADD_MOVIE.cpp"
 using namespace std;
 void mainmenu()
 {
@@ -26,10 +28,10 @@ void mainmenu()
             break;
         case 10:
             cout << "Thank you for using our service!";
-            stop=1;
             break;
         default:
             cout << "Invalid choice! Please choose another number";
+            mainmenu();
             break;
     }
 }
