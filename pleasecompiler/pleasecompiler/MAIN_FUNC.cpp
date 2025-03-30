@@ -8,7 +8,7 @@
 datastorage datastruct;
 int main()
 {
-	//datastorage::loadfromfile();
+	datastorage::loadfromfile();
 	while (true)
 	{
 		if (!datastorage::mainmenu())

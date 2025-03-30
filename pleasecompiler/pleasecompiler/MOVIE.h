@@ -25,7 +25,7 @@ public:
     bool is_rented = 0;
     float fees_per_day = 0;
     float over_fees_per_day = 0;
-    vector<float> rating{};
+    vector<float> rating;
     float overall_rating = 0;
     date current_date;
     date due_date;
